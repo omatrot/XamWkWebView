@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>createpushpinfrombase64HTML</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: "Segoe UI", Helvetica, Arial, Sans-Serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="printoutPanel"></div>
+
+    <div id="myMap" style="width: 100vw; height: 100vh"></div>
+    <script type="text/javascript">function loadMapScenario() {
+        var bingCredentials = "REPLACE WITH APPROPRIATE CREDENTIALS";
+        var base64Image =
+          "data:image/png;base64,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";
+        var map = new Microsoft.Maps.Map(document.getElementById("myMap"), {
+          credentials: bingCredentials,
+        });
+        var mapCenterLocation = map.getCenter();
+        var mapCenterPoint = map.tryLocationToPixel(mapCenterLocation);
+        var mapCenterPointPlus50px = new Microsoft.Maps.Point(
+          mapCenterPoint.x + 50,
+          mapCenterPoint.y
+        );
+        var mapCenterLocationPlus50px = map.tryPixelToLocation(
+          mapCenterPointPlus50px
+        );
+        var pushpin = new Microsoft.Maps.Pushpin(mapCenterLocation, {
+          icon: base64Image,
+          anchor: new Microsoft.Maps.Point(12, 28),
+        });
+        var pushpin2 = new Microsoft.Maps.Pushpin(mapCenterLocationPlus50px, {
+          icon: base64Image,
+          iconSize: { width: 20, height: 22 },
+        });
+        map.entities.push([pushpin, pushpin2]);
+      }</script>
+    <script type="text/javascript"
+            src="https://www.bing.com/api/maps/mapcontrol?key=YourBingMapsKey&callback=loadMapScenario"
+            async
+            defer></script>
+</body>
+</html>
